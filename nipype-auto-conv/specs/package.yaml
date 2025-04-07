@@ -9,3 +9,5 @@ import_translations: null
 find_replace:
   - ["if not out_dir:", "if not output_dir:"]
   - ["if runtime is None:", "if False:"]
+  - ["IFLOGGER = logging\\.getLogger\\(\"nipype.interface\"\\)", ""]
+  - ["IFLOGGER", "logger"]
