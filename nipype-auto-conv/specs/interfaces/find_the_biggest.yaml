@@ -5,22 +5,22 @@
 #
 # Docs
 # ----
-#
-#     Use FSL find_the_biggest for performing hard segmentation on
-#     the outputs of connectivity-based thresholding in probtrack.
-#     For complete details, see the `FDT
-#     Documentation. <http://www.fmrib.ox.ac.uk/fsl/fdt/fdt_biggest.html>`_
-#
-#     Example
-#     -------
-#
-#     >>> from nipype.interfaces import fsl
-#     >>> ldir = ['seeds_to_M1.nii', 'seeds_to_M2.nii']
-#     >>> fBig = fsl.FindTheBiggest(in_files=ldir, out_file='biggestSegmentation')
-#     >>> fBig.cmdline
-#     'find_the_biggest seeds_to_M1.nii seeds_to_M2.nii biggestSegmentation'
-#
-#
+# 
+# Use FSL find_the_biggest for performing hard segmentation on
+# the outputs of connectivity-based thresholding in probtrack.
+# For complete details, see the `FDT
+# Documentation. <http://www.fmrib.ox.ac.uk/fsl/fdt/fdt_biggest.html>`_
+# 
+# Example
+# -------
+# 
+# >>> from nipype.interfaces import fsl
+# >>> ldir = ['seeds_to_M1.nii', 'seeds_to_M2.nii']
+# >>> fBig = fsl.FindTheBiggest(in_files=ldir, out_file='biggestSegmentation')
+# >>> fBig.cmdline
+# 'find_the_biggest seeds_to_M1.nii seeds_to_M2.nii biggestSegmentation'
+# 
+# 
 task_name: FindTheBiggest
 nipype_name: FindTheBiggest
 nipype_module: nipype.interfaces.fsl.dti
@@ -37,9 +37,6 @@ inputs:
   # passed to the field in the automatically generated unittests.
     in_files: generic/file+list-of
     # type=list|default=[]: a list of input volumes or a singleMatrixFile
-    out_file: Path
-    # type=file: output file indexed in order of input files
-    # type=file|default=<undefined>: file with the resulting segmentation
   callable_defaults:
   # dict[str, str] - names of methods/callable classes defined in the adjacent `*_callables.py`
   # to set as the `default` method of input fields
@@ -63,7 +60,7 @@ outputs:
   # dict[str, str] - names of methods/callable classes defined in the adjacent `*_callables.py`
   # to set to the `callable` attribute of output fields
   templates:
-  # dict[str, str] - `output_file_template` values to be provided to output fields
+  # dict[str, str] - `path_template` values to be provided to output fields
     out_file: '"biggestSegmentation"'
     # type=file: output file indexed in order of input files
     # type=file|default=<undefined>: file with the resulting segmentation
@@ -79,21 +76,21 @@ tests:
     # type=file: output file indexed in order of input files
     # type=file|default=<undefined>: file with the resulting segmentation
     output_type:
-    # type=enum|default='NIFTI'|allowed['NIFTI','NIFTI_GZ','NIFTI_PAIR','NIFTI_PAIR_GZ']: FSL output type
+    # type=enum|default='NIFTI'|allowed['GIFTI','NIFTI','NIFTI_GZ','NIFTI_PAIR','NIFTI_PAIR_GZ']: FSL output type
     args:
     # type=str|default='': Additional parameters to the command
     environ:
     # type=dict|default={}: Environment variables
   imports:
-  # list[nipype2pydra.task.base.importstatement] - list import statements required by the test, with each list item
+  # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys
   expected_outputs:
   # dict[str, str] - expected values for selected outputs, noting that tests will typically
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test,
-  # after which the test will be considered to have been initialised
+  # int - the value to set for the timeout in the generated test, 
+  # after which the test will be considered to have been initialised 
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -108,15 +105,15 @@ tests:
     # type=file: output file indexed in order of input files
     # type=file|default=<undefined>: file with the resulting segmentation
   imports:
-  # list[nipype2pydra.task.base.importstatement] - list import statements required by the test, with each list item
+  # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys
   expected_outputs:
   # dict[str, str] - expected values for selected outputs, noting that tests will typically
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test,
-  # after which the test will be considered to have been initialised
+  # int - the value to set for the timeout in the generated test, 
+  # after which the test will be considered to have been initialised 
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -135,7 +132,7 @@ doctests:
     # type=file: output file indexed in order of input files
     # type=file|default=<undefined>: file with the resulting segmentation
   imports:
-  # list[nipype2pydra.task.base.importstatement] - list import statements required by the test, with each list item
+  # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys
   directive:
   # str - any doctest directive to place on the cmdline call, e.g. # doctest: +ELLIPSIS

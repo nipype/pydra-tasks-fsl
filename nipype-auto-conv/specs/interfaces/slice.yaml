@@ -6,20 +6,20 @@
 # Docs
 # ----
 # Use fslslice to split a 3D file into lots of 2D files (along z-axis).
-#
-#
-#     Examples
-#     --------
-#
-#     >>> from nipype.interfaces.fsl import Slice
-#     >>> slice = Slice()
-#     >>> slice.inputs.in_file = 'functional.nii'
-#     >>> slice.inputs.out_base_name = 'sl'
-#     >>> slice.cmdline
-#     'fslslice functional.nii sl'
-#
-#
-#
+# 
+# 
+# Examples
+# --------
+# 
+# >>> from nipype.interfaces.fsl import Slice
+# >>> slice = Slice()
+# >>> slice.inputs.in_file = 'functional.nii'
+# >>> slice.inputs.out_base_name = 'sl'
+# >>> slice.cmdline
+# 'fslslice functional.nii sl'
+# 
+# 
+# 
 task_name: Slice
 nipype_name: Slice
 nipype_module: nipype.interfaces.fsl.utils
@@ -53,12 +53,12 @@ outputs:
   # for file types, where specifying the format also specifies the file that will be
   # passed to the field in the automatically generated unittests.
     out_files: generic/file+list-of
-    # type=outputmultiobject:
+    # type=outputmultiobject: 
   callables:
   # dict[str, str] - names of methods/callable classes defined in the adjacent `*_callables.py`
   # to set to the `callable` attribute of output fields
   templates:
-  # dict[str, str] - `output_file_template` values to be provided to output fields
+  # dict[str, str] - `path_template` values to be provided to output fields
   requirements:
   # dict[str, list[str]] - input fields that are required to be provided for the output field to be present
 tests:
@@ -70,21 +70,21 @@ tests:
     out_base_name:
     # type=str|default='': outputs prefix
     output_type:
-    # type=enum|default='NIFTI'|allowed['NIFTI','NIFTI_GZ','NIFTI_PAIR','NIFTI_PAIR_GZ']: FSL output type
+    # type=enum|default='NIFTI'|allowed['GIFTI','NIFTI','NIFTI_GZ','NIFTI_PAIR','NIFTI_PAIR_GZ']: FSL output type
     args:
     # type=str|default='': Additional parameters to the command
     environ:
     # type=dict|default={}: Environment variables
   imports:
-  # list[nipype2pydra.task.base.importstatement] - list import statements required by the test, with each list item
+  # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys
   expected_outputs:
   # dict[str, str] - expected values for selected outputs, noting that tests will typically
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test,
-  # after which the test will be considered to have been initialised
+  # int - the value to set for the timeout in the generated test, 
+  # after which the test will be considered to have been initialised 
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -95,18 +95,16 @@ tests:
   # (if not specified, will try to choose a sensible value)
     in_file:
     # type=file|default=<undefined>: input filename
-    out_base_name: '"sl"'
-    # type=str|default='': outputs prefix
   imports:
-  # list[nipype2pydra.task.base.importstatement] - list import statements required by the test, with each list item
+  # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys
   expected_outputs:
   # dict[str, str] - expected values for selected outputs, noting that tests will typically
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test,
-  # after which the test will be considered to have been initialised
+  # int - the value to set for the timeout in the generated test, 
+  # after which the test will be considered to have been initialised 
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -121,10 +119,8 @@ doctests:
   # '.mock()' method of the corresponding class is used instead.
     in_file: '"functional.nii"'
     # type=file|default=<undefined>: input filename
-    out_base_name: '"sl"'
-    # type=str|default='': outputs prefix
   imports:
-  # list[nipype2pydra.task.base.importstatement] - list import statements required by the test, with each list item
+  # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys
   directive:
   # str - any doctest directive to place on the cmdline call, e.g. # doctest: +ELLIPSIS
