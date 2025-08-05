@@ -124,7 +124,7 @@ jobs:
 
 
   deploy-fileformats:
-    needs: [test]
+    needs: [build, test, fileformats-test]
     runs-on: ubuntu-latest
     steps:
 
