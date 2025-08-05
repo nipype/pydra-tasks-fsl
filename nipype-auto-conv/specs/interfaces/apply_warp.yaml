@@ -6,7 +6,7 @@
 # Docs
 # ----
 # FSL's applywarp wrapper to apply the results of a FNIRT registration
-# 
+#
 # Examples
 # --------
 # >>> from nipype.interfaces import fsl
@@ -16,9 +16,9 @@
 # >>> aw.inputs.ref_file = example_data('mni.nii')
 # >>> aw.inputs.field_file = 'my_coefficients_filed.nii' #doctest: +SKIP
 # >>> res = aw.run() #doctest: +SKIP
-# 
-# 
-# 
+#
+#
+#
 task_name: ApplyWarp
 nipype_name: ApplyWarp
 nipype_module: nipype.interfaces.fsl.preprocess
@@ -119,8 +119,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

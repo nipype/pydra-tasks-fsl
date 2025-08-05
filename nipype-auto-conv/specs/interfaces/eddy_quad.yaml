@@ -5,14 +5,14 @@
 #
 # Docs
 # ----
-# 
+#
 # Interface for FSL eddy_quad, a tool for generating single subject reports
 # and storing the quality assessment indices for each subject.
 # `User guide <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/eddyqc/UsersGuide>`__
-# 
+#
 # Examples
 # --------
-# 
+#
 # >>> from nipype.interfaces.fsl import EddyQuad
 # >>> quad = EddyQuad()
 # >>> quad.inputs.base_name  = 'eddy_corrected'
@@ -27,8 +27,8 @@
 # >>> quad.cmdline
 # 'eddy_quad eddy_corrected --bvals bvals.scheme --bvecs bvecs.scheme --field fieldmap_phase_fslprepared.nii --eddyIdx epi_index.txt --mask epi_mask.nii --output-dir eddy_corrected.qc --eddyParams epi_acqp.txt --verbose'
 # >>> res = quad.run() # doctest: +SKIP
-# 
-# 
+#
+#
 task_name: EddyQuad
 nipype_name: EddyQuad
 nipype_module: nipype.interfaces.fsl.epi
@@ -134,8 +134,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -156,8 +156,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

@@ -7,10 +7,10 @@
 # ----
 # Multivariate Exploratory Linear Optimised Decomposition into Independent
 # Components
-# 
+#
 # Examples
 # --------
-# 
+#
 # >>> melodic_setup = MELODIC()
 # >>> melodic_setup.inputs.approach = 'tica'
 # >>> melodic_setup.inputs.in_files = ['functional.nii', 'functional2.nii', 'functional3.nii']
@@ -27,9 +27,9 @@
 # >>> melodic_setup.cmdline
 # 'melodic -i functional.nii,functional2.nii,functional3.nii -a tica --bgthreshold=10.000000 --mmthresh=0.500000 --nobet -o groupICA.out --Ostats --Scon=subjectDesign.con --Sdes=subjectDesign.mat --Tcon=timeDesign.con --Tdes=timeDesign.mat --tr=1.500000'
 # >>> melodic_setup.run() # doctest: +SKIP
-# 
-# 
-# 
+#
+#
+#
 task_name: MELODIC
 nipype_name: MELODIC
 nipype_module: nipype.interfaces.fsl.model
@@ -81,17 +81,17 @@ outputs:
   # for file types, where specifying the format also specifies the file that will be
   # passed to the field in the automatically generated unittests.
     out_dir: generic/directory
-    # type=directory: 
+    # type=directory:
     # type=directory|default=<undefined>: output directory name
     report_dir: generic/directory
-    # type=directory: 
+    # type=directory:
   callables:
   # dict[str, str] - names of methods/callable classes defined in the adjacent `*_callables.py`
   # to set to the `callable` attribute of output fields
   templates:
   # dict[str, str] - `path_template` values to be provided to output fields
     out_dir: out_dir
-    # type=directory: 
+    # type=directory:
     # type=directory|default=<undefined>: output directory name
   requirements:
   # dict[str, list[str]] - input fields that are required to be provided for the output field to be present
@@ -102,7 +102,7 @@ tests:
     in_files:
     # type=inputmultiobject|default=[]: input file names (either single file name or a list)
     out_dir:
-    # type=directory: 
+    # type=directory:
     # type=directory|default=<undefined>: output directory name
     mask:
     # type=file|default=<undefined>: file name of mask for thresholding
@@ -210,8 +210,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -240,8 +240,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

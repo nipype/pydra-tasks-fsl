@@ -5,18 +5,18 @@
 #
 # Docs
 # ----
-# 
+#
 # Interface for FSL eddy, a tool for estimating and correcting eddy
 # currents induced distortions. `User guide
 # <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/eddy/UsersGuide>`__ and
 # `more info regarding acqp file
 # <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/eddy/Faq#How_do_I_know_what_to_put_into_my_--acqp_file.3F>`_.
-# 
+#
 # Examples
 # --------
-# 
+#
 # >>> from nipype.interfaces.fsl import Eddy
-# 
+#
 # Running eddy on a CPU using OpenMP:
 # >>> eddy = Eddy()
 # >>> eddy.inputs.in_file = 'epi.nii'
@@ -27,12 +27,12 @@
 # >>> eddy.inputs.in_bval  = 'bvals.scheme'
 # >>> eddy.cmdline  # doctest: +ELLIPSIS
 # 'eddy_openmp --flm=quadratic --ff=10.0 --acqp=epi_acqp.txt --bvals=bvals.scheme --bvecs=bvecs.scheme --imain=epi.nii --index=epi_index.txt --mask=epi_mask.nii --interp=spline --resamp=jac --niter=5 --nvoxhp=1000 --out=.../eddy_corrected --slm=none'
-# 
+#
 # Running eddy on an Nvidia GPU using cuda:
 # >>> eddy.inputs.use_cuda = True
 # >>> eddy.cmdline # doctest: +ELLIPSIS
 # 'eddy_cuda --flm=quadratic --ff=10.0 --acqp=epi_acqp.txt --bvals=bvals.scheme --bvecs=bvecs.scheme --imain=epi.nii --index=epi_index.txt --mask=epi_mask.nii --interp=spline --resamp=jac --niter=5 --nvoxhp=1000 --out=.../eddy_corrected --slm=none'
-# 
+#
 # Running eddy with slice-to-volume motion correction:
 # >>> eddy.inputs.mporder = 6
 # >>> eddy.inputs.slice2vol_niter = 5
@@ -42,8 +42,8 @@
 # >>> eddy.cmdline  # doctest: +ELLIPSIS
 # 'eddy_cuda --flm=quadratic --ff=10.0 --acqp=epi_acqp.txt --bvals=bvals.scheme --bvecs=bvecs.scheme --imain=epi.nii --index=epi_index.txt --mask=epi_mask.nii --interp=spline --resamp=jac --mporder=6 --niter=5 --nvoxhp=1000 --out=.../eddy_corrected --s2v_interp=trilinear --s2v_lambda=1 --s2v_niter=5 --slspec=epi_slspec.txt --slm=none'
 # >>> res = eddy.run()     # doctest: +SKIP
-# 
-# 
+#
+#
 task_name: Eddy
 nipype_name: Eddy
 nipype_module: nipype.interfaces.fsl.epi
@@ -249,8 +249,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -271,8 +271,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -291,8 +291,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -315,8 +315,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

@@ -5,10 +5,10 @@
 #
 # Docs
 # ----
-# 
+#
 # Test the accuracy of an existing training dataset on a set of hand-labelled subjects.
 # Note: This may or may not be working. Couldn't presently not confirm because fix fails on this (even outside of nipype) without leaving an error msg.
-# 
+#
 task_name: AccuracyTester
 nipype_name: AccuracyTester
 nipype_module: nipype.interfaces.fsl.fix
@@ -76,8 +76,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

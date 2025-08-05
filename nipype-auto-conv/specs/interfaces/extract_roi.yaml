@@ -7,7 +7,7 @@
 # ----
 # Uses FSL Fslroi command to extract region of interest (ROI)
 # from an image.
-# 
+#
 # You can a) take a 3D ROI from a 3D data set (or if it is 4D, the
 # same ROI is taken from each time point and a new 4D data set is
 # created), b) extract just some time points from a 4D data set, or
@@ -15,20 +15,20 @@
 # arguments are minimum index and size (not maximum index).  So to
 # extract voxels 10 to 12 inclusive you would specify 10 and 3 (not
 # 10 and 12).
-# 
-# 
+#
+#
 # Examples
 # --------
-# 
+#
 # >>> from nipype.interfaces.fsl import ExtractROI
 # >>> from nipype.testing import anatfile
 # >>> fslroi = ExtractROI(in_file=anatfile, roi_file='bar.nii', t_min=0,
 # ...                     t_size=1)
 # >>> fslroi.cmdline == 'fslroi %s bar.nii 0 1' % anatfile
 # True
-# 
-# 
-# 
+#
+#
+#
 task_name: ExtractROI
 nipype_name: ExtractROI
 nipype_module: nipype.interfaces.fsl.utils
@@ -62,7 +62,7 @@ outputs:
   # for file types, where specifying the format also specifies the file that will be
   # passed to the field in the automatically generated unittests.
     roi_file: medimage/nifti1
-    # type=file: 
+    # type=file:
     # type=file|default=<undefined>: output file
   callables:
   # dict[str, str] - names of methods/callable classes defined in the adjacent `*_callables.py`
@@ -70,7 +70,7 @@ outputs:
   templates:
   # dict[str, str] - `path_template` values to be provided to output fields
     roi_file: '"bar.nii"'
-    # type=file: 
+    # type=file:
     # type=file|default=<undefined>: output file
   requirements:
   # dict[str, list[str]] - input fields that are required to be provided for the output field to be present
@@ -81,24 +81,24 @@ tests:
     in_file:
     # type=file|default=<undefined>: input file
     roi_file:
-    # type=file: 
+    # type=file:
     # type=file|default=<undefined>: output file
     x_min:
-    # type=int|default=0: 
+    # type=int|default=0:
     x_size:
-    # type=int|default=0: 
+    # type=int|default=0:
     y_min:
-    # type=int|default=0: 
+    # type=int|default=0:
     y_size:
-    # type=int|default=0: 
+    # type=int|default=0:
     z_min:
-    # type=int|default=0: 
+    # type=int|default=0:
     z_size:
-    # type=int|default=0: 
+    # type=int|default=0:
     t_min:
-    # type=int|default=0: 
+    # type=int|default=0:
     t_size:
-    # type=int|default=0: 
+    # type=int|default=0:
     crop_list:
     # type=list|default=[]: list of two tuples specifying crop options
     output_type:
@@ -115,8 +115,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -128,12 +128,12 @@ tests:
     in_file:
     # type=file|default=<undefined>: input file
     roi_file: '"bar.nii"'
-    # type=file: 
+    # type=file:
     # type=file|default=<undefined>: output file
     t_min: '0'
-    # type=int|default=0: 
+    # type=int|default=0:
     t_size: '1'
-    # type=int|default=0: 
+    # type=int|default=0:
   imports: &id001
   # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys
@@ -145,8 +145,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -162,12 +162,12 @@ doctests:
     in_file: anatfile
     # type=file|default=<undefined>: input file
     roi_file: '"bar.nii"'
-    # type=file: 
+    # type=file:
     # type=file|default=<undefined>: output file
     t_min: '0'
-    # type=int|default=0: 
+    # type=int|default=0:
     t_size: '1'
-    # type=int|default=0: 
+    # type=int|default=0:
   imports: *id001
   # list[nipype2pydra.statements.imports.explicitimport] - list import statements required by the test, with each list item
   # consisting of 'module', 'name', and optionally 'alias' keys

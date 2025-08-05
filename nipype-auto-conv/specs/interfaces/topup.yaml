@@ -5,7 +5,7 @@
 #
 # Docs
 # ----
-# 
+#
 # Interface for FSL topup, a tool for estimating and correcting
 # susceptibility induced distortions. See FSL documentation for
 # `reference <http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/TOPUP>`_,
@@ -13,10 +13,10 @@
 # <http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/topup/ExampleTopupFollowedByApplytopup>`_,
 # and `exemplary config files
 # <https://github.com/ahheckel/FSL-scripts/blob/master/rsc/fsl/fsl4/topup/b02b0.cnf>`_.
-# 
+#
 # Examples
 # --------
-# 
+#
 # >>> from nipype.interfaces.fsl import TOPUP
 # >>> topup = TOPUP()
 # >>> topup.inputs.in_file = "b0_b0rev.nii"
@@ -25,8 +25,8 @@
 # >>> topup.cmdline # doctest: +ELLIPSIS
 # 'topup --config=b02b0.cnf --datain=topup_encoding.txt --imain=b0_b0rev.nii --out=b0_b0rev_base --iout=b0_b0rev_corrected.nii.gz --fout=b0_b0rev_field.nii.gz --jacout=jac --logout=b0_b0rev_topup.log --rbmout=xfm --dfout=warpfield'
 # >>> res = topup.run() # doctest: +SKIP
-# 
-# 
+#
+#
 task_name: TOPUP
 nipype_name: TOPUP
 nipype_module: nipype.interfaces.fsl.epi
@@ -162,8 +162,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -184,8 +184,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

@@ -5,10 +5,10 @@
 #
 # Docs
 # ----
-# 
+#
 # Perform model parameters estimation for local (voxelwise) diffusion
 # parameters
-# 
+#
 task_name: XFibres5
 nipype_name: XFibres5
 nipype_module: nipype.interfaces.fsl.dti
@@ -32,7 +32,7 @@ inputs:
     gradnonlin: generic/file
     # type=file|default=<undefined>: gradient file corresponding to slice
     logdir: generic/directory
-    # type=directory|default='.': 
+    # type=directory|default='.':
     mask: generic/file
     # type=file|default=<undefined>: brain binary mask file (i.e. from BET)
   callable_defaults:
@@ -89,7 +89,7 @@ tests:
     bvals:
     # type=file|default=<undefined>: b values file
     logdir:
-    # type=directory|default='.': 
+    # type=directory|default='.':
     n_fibres:
     # type=range|default=2: Maximum number of fibres to fit in each voxel
     model:
@@ -140,8 +140,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

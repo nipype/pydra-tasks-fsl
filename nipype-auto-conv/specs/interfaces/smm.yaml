@@ -5,12 +5,12 @@
 #
 # Docs
 # ----
-# 
+#
 # Spatial Mixture Modelling. For more detail on the spatial mixture modelling
 # see Mixture Models with Adaptive Spatial Regularisation for Segmentation
 # with an Application to FMRI Data; Woolrich, M., Behrens, T., Beckmann, C.,
 # and Smith, S.; IEEE Trans. Medical Imaging, 24(1):1-11, 2005.
-# 
+#
 task_name: SMM
 nipype_name: SMM
 nipype_module: nipype.interfaces.fsl.model
@@ -46,11 +46,11 @@ outputs:
   # for file types, where specifying the format also specifies the file that will be
   # passed to the field in the automatically generated unittests.
     activation_p_map: generic/file
-    # type=file: 
+    # type=file:
     deactivation_p_map: generic/file
-    # type=file: 
+    # type=file:
     null_p_map: generic/file
-    # type=file: 
+    # type=file:
   callables:
   # dict[str, str] - names of methods/callable classes defined in the adjacent `*_callables.py`
   # to set to the `callable` attribute of output fields
@@ -82,8 +82,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

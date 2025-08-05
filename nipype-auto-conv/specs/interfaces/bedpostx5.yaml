@@ -5,7 +5,7 @@
 #
 # Docs
 # ----
-# 
+#
 # BEDPOSTX stands for Bayesian Estimation of Diffusion Parameters Obtained
 # using Sampling Techniques. The X stands for modelling Crossing Fibres.
 # bedpostx runs Markov Chain Monte Carlo sampling to build up distributions
@@ -13,22 +13,22 @@
 # for running probabilistic tractography. For an overview of the modelling
 # carried out within bedpostx see this `technical report
 # <http://www.fmrib.ox.ac.uk/analysis/techrep/tr03tb1/tr03tb1/index.html>`_.
-# 
-# 
+#
+#
 # .. note:: Consider using
 #   :func:`niflow.nipype1.workflows.fsl.dmri.create_bedpostx_pipeline` instead.
-# 
-# 
+#
+#
 # Example
 # -------
-# 
+#
 # >>> from nipype.interfaces import fsl
 # >>> bedp = fsl.BEDPOSTX5(bvecs='bvecs', bvals='bvals', dwi='diffusion.nii',
 # ...                     mask='mask.nii', n_fibres=1)
 # >>> bedp.cmdline
 # 'bedpostx bedpostx -b 0 --burnin_noard=0 --forcedir -n 1 -j 5000 -s 1 --updateproposalevery=40'
-# 
-# 
+#
+#
 task_name: BEDPOSTX5
 nipype_name: BEDPOSTX5
 nipype_module: nipype.interfaces.fsl.dti
@@ -52,7 +52,7 @@ inputs:
     grad_dev: generic/file
     # type=file|default=<undefined>: grad_dev file, if gradnonlin, -g is True
     logdir: generic/directory
-    # type=directory|default=<undefined>: 
+    # type=directory|default=<undefined>:
     mask: medimage/nifti1
     # type=file|default=<undefined>: bet binary mask file
     out_dir: generic/directory
@@ -113,7 +113,7 @@ tests:
     bvals:
     # type=file|default=<undefined>: b values file
     logdir:
-    # type=directory|default=<undefined>: 
+    # type=directory|default=<undefined>:
     n_fibres:
     # type=range|default=2: Maximum number of fibres to fit in each voxel
     model:
@@ -172,8 +172,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -200,8 +200,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true

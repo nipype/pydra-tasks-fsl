@@ -6,10 +6,10 @@
 # Docs
 # ----
 # Wrapper Script for Dual Regression Workflow
-# 
+#
 # Examples
 # --------
-# 
+#
 # >>> dual_regression = DualRegression()
 # >>> dual_regression.inputs.in_files = ["functional.nii", "functional2.nii", "functional3.nii"]
 # >>> dual_regression.inputs.group_IC_maps_4D = "allFA.nii"
@@ -20,8 +20,8 @@
 # >>> dual_regression.cmdline
 # 'dual_regression allFA.nii 0 -1 10 my_output_directory functional.nii functional2.nii functional3.nii'
 # >>> dual_regression.run() # doctest: +SKIP
-# 
-# 
+#
+#
 task_name: DualRegression
 nipype_name: DualRegression
 nipype_module: nipype.interfaces.fsl.model
@@ -61,7 +61,7 @@ outputs:
   # for file types, where specifying the format also specifies the file that will be
   # passed to the field in the automatically generated unittests.
     out_dir: generic/directory
-    # type=directory: 
+    # type=directory:
     # type=directory|default='output': This directory will be created to hold all output and logfiles
   callables:
   # dict[str, str] - names of methods/callable classes defined in the adjacent `*_callables.py`
@@ -69,7 +69,7 @@ outputs:
   templates:
   # dict[str, str] - `path_template` values to be provided to output fields
     out_dir: out_dir
-    # type=directory: 
+    # type=directory:
     # type=directory|default='output': This directory will be created to hold all output and logfiles
   requirements:
   # dict[str, list[str]] - input fields that are required to be provided for the output field to be present
@@ -92,7 +92,7 @@ tests:
     n_perm:
     # type=int|default=0: Number of permutations for randomise; set to 1 for just raw tstat output, set to 0 to not run randomise at all.
     out_dir:
-    # type=directory: 
+    # type=directory:
     # type=directory|default='output': This directory will be created to hold all output and logfiles
     output_type:
     # type=enum|default='NIFTI'|allowed['GIFTI','NIFTI','NIFTI_GZ','NIFTI_PAIR','NIFTI_PAIR_GZ']: FSL output type
@@ -108,8 +108,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
@@ -132,8 +132,8 @@ tests:
   # be terminated before they complete for time-saving reasons, and therefore
   # these values will be ignored, when running in CI
   timeout: 10
-  # int - the value to set for the timeout in the generated test, 
-  # after which the test will be considered to have been initialised 
+  # int - the value to set for the timeout in the generated test,
+  # after which the test will be considered to have been initialised
   # successfully. Set to 0 to disable the timeout (warning, this could
   # lead to the unittests taking a very long time to complete)
   xfail: true
