@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.reorient_2_std import Reorient2Std
+from pydra.tasks.fsl.v6.utils.reorient_2_std import Reorient2Std
 import pytest
 
 

@@ -2,7 +2,7 @@ from fileformats.generic import File
 from fileformats.text import TextFile
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.epi.eddy_quad import EddyQuad
+from pydra.tasks.fsl.v6.epi.eddy_quad import EddyQuad
 import pytest
 
 

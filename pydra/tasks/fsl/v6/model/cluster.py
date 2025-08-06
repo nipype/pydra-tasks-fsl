@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pydra.compose import shell
 import typing as ty
@@ -118,7 +118,7 @@ class Cluster(shell.Task["Cluster.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.model.cluster import Cluster
+    >>> from pydra.tasks.fsl.v6.model.cluster import Cluster
 
     >>> task = Cluster()
     >>> task.in_file = File.mock()

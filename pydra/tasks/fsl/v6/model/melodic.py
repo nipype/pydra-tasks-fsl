@@ -53,7 +53,7 @@ class MELODIC(shell.Task["MELODIC.Outputs"]):
 
     >>> from fileformats.generic import Directory, File
     >>> from fileformats.medimage_fsl import Con
-    >>> from pydra.tasks.fsl.v6_0.model.melodic import MELODIC
+    >>> from pydra.tasks.fsl.v6.model.melodic import MELODIC
 
     >>> task = MELODIC()
     >>> task.mask = File.mock()

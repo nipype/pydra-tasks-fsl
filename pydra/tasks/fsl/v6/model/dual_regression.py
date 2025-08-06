@@ -18,7 +18,7 @@ def out_dir_default(inputs):
     return _gen_filename("out_dir", inputs=inputs)
 
 
-@shell.define
+@shell.define(xor=[["one_sample_group_mean", "design_file"]])
 class DualRegression(shell.Task["DualRegression.Outputs"]):
     """
     Examples
@@ -26,7 +26,7 @@ class DualRegression(shell.Task["DualRegression.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
-    >>> from pydra.tasks.fsl.v6_0.model.dual_regression import DualRegression
+    >>> from pydra.tasks.fsl.v6.model.dual_regression import DualRegression
 
     >>> task = DualRegression()
     >>> task.in_files = [Nifti1.mock("functional.nii"), Nifti1.mock("functional2.nii"), Nifti1.mock("functional3.nii")]
@@ -64,7 +64,7 @@ class DualRegression(shell.Task["DualRegression.Outputs"]):
         argstr="-1",
         position=3,
     )
-    design_file: File = shell.arg(
+    design_file: File | None = shell.arg(
         help="Design matrix for final cross-subject modelling with randomise",
         argstr="{design_file}",
         position=3,
@@ -86,5 +86,4 @@ class DualRegression(shell.Task["DualRegression.Outputs"]):
             argstr="{out_dir}",
             position=6,
             path_template="out_dir",
-            default="output",
         )

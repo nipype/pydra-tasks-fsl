@@ -1,6 +1,6 @@
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pathlib import Path
 from pathlib import Path
@@ -154,6 +154,8 @@ def real_out_file_default(inputs):
             "real_out_file",
             "real_polar",
         ],
+        ["complex_in_file", "real_in_file", "magnitude_in_file"],
+        ["complex_in_file2", "imaginary_in_file", "phase_in_file"],
     ]
 )
 class Complex(shell.Task["Complex.Outputs"]):
@@ -163,21 +165,27 @@ class Complex(shell.Task["Complex.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.complex import Complex
+    >>> from pydra.tasks.fsl.v6.utils.complex import Complex
 
     """
 
     executable = "fslcomplex"
-    complex_in_file: File = shell.arg(help="", argstr="{complex_in_file}", position=2)
-    complex_in_file2: File = shell.arg(help="", argstr="{complex_in_file2}", position=3)
-    real_in_file: File = shell.arg(help="", argstr="{real_in_file}", position=2)
-    imaginary_in_file: File = shell.arg(
+    complex_in_file: File | None = shell.arg(
+        help="", argstr="{complex_in_file}", position=2
+    )
+    complex_in_file2: File | None = shell.arg(
+        help="", argstr="{complex_in_file2}", position=3
+    )
+    real_in_file: File | None = shell.arg(help="", argstr="{real_in_file}", position=2)
+    imaginary_in_file: File | None = shell.arg(
         help="", argstr="{imaginary_in_file}", position=3
     )
-    magnitude_in_file: File = shell.arg(
+    magnitude_in_file: File | None = shell.arg(
         help="", argstr="{magnitude_in_file}", position=2
     )
-    phase_in_file: File = shell.arg(help="", argstr="{phase_in_file}", position=3)
+    phase_in_file: File | None = shell.arg(
+        help="", argstr="{phase_in_file}", position=3
+    )
     start_vol: int | None = shell.arg(help="", argstr="{start_vol}", position=-2)
     end_vol: int | None = shell.arg(help="", argstr="{end_vol}", position=-1)
     real_polar: bool = shell.arg(help="", argstr="-realpolar", position=1)

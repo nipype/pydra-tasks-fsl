@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from glob import glob
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import simplify_list
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import simplify_list
 import os
 from pydra.compose import shell
 
@@ -104,7 +104,7 @@ class FEATModel(shell.Task["FEATModel.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.model.feat_model import FEATModel
+    >>> from pydra.tasks.fsl.v6.model.feat_model import FEATModel
 
     """
 

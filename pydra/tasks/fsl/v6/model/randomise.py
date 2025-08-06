@@ -5,7 +5,7 @@ from fileformats.medimage import Nifti1
 from fileformats.medimage_fsl import Con
 from glob import glob
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 from pydra.compose import shell
 
 
@@ -142,7 +142,7 @@ class Randomise(shell.Task["Randomise.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from fileformats.medimage_fsl import Con
-    >>> from pydra.tasks.fsl.v6_0.model.randomise import Randomise
+    >>> from pydra.tasks.fsl.v6.model.randomise import Randomise
 
     >>> task = Randomise()
     >>> task.in_file = Nifti1.mock("allFA.nii")

@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.tract_skeleton import TractSkeleton
+from pydra.tasks.fsl.v6.dti.tract_skeleton import TractSkeleton
 import pytest
 
 

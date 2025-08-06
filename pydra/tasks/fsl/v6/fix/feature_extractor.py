@@ -30,7 +30,7 @@ class FeatureExtractor(shell.Task["FeatureExtractor.Outputs"]):
     -------
 
     >>> from fileformats.generic import Directory
-    >>> from pydra.tasks.fsl.v6_0.fix.feature_extractor import FeatureExtractor
+    >>> from pydra.tasks.fsl.v6.fix.feature_extractor import FeatureExtractor
 
     """
 

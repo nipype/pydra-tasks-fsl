@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from glob import glob
 import logging
-from pydra.tasks.fsl.v6_0.base import Info
+from pydra.tasks.fsl.v6.base import Info
 import os
 from pydra.compose import shell
 import typing as ty
@@ -37,7 +37,7 @@ class Split(shell.Task["Split.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.utils.split import Split
+    >>> from pydra.tasks.fsl.v6.utils.split import Split
 
     """
 

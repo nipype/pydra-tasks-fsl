@@ -60,7 +60,7 @@ class WarpPointsToStd(shell.Task["WarpPointsToStd.Outputs"]):
     >>> from fileformats.medimage import Nifti1
     >>> from fileformats.text import TextFile
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.warp_points_to_std import WarpPointsToStd
+    >>> from pydra.tasks.fsl.v6.utils.warp_points_to_std import WarpPointsToStd
 
     >>> task = WarpPointsToStd()
     >>> task.img_file = File.mock()

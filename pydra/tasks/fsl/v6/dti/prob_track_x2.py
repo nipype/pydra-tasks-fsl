@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from fileformats.medimage import NiftiGz
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pydra.compose import shell
 import typing as ty
@@ -232,7 +232,7 @@ class ProbTrackX2(shell.Task["ProbTrackX2.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import NiftiGz
-    >>> from pydra.tasks.fsl.v6_0.dti.prob_track_x2 import ProbTrackX2
+    >>> from pydra.tasks.fsl.v6.dti.prob_track_x2 import ProbTrackX2
 
     >>> task = ProbTrackX2()
     >>> task.fopd = File.mock()

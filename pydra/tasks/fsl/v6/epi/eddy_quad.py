@@ -111,7 +111,7 @@ class EddyQuad(shell.Task["EddyQuad.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from fileformats.text import TextFile
-    >>> from pydra.tasks.fsl.v6_0.epi.eddy_quad import EddyQuad
+    >>> from pydra.tasks.fsl.v6.epi.eddy_quad import EddyQuad
 
     >>> task = EddyQuad()
     >>> task.idx_file = File.mock()

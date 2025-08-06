@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pydra.compose import shell
 import typing as ty
@@ -150,7 +150,7 @@ class EPIDeWarp(shell.Task["EPIDeWarp.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
-    >>> from pydra.tasks.fsl.v6_0.epi.epi_de_warp import EPIDeWarp
+    >>> from pydra.tasks.fsl.v6.epi.epi_de_warp import EPIDeWarp
 
     >>> task = EPIDeWarp()
     >>> task.mag_file = File.mock()

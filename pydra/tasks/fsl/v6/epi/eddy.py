@@ -4,7 +4,7 @@ from fileformats.medimage import Nifti1
 from fileformats.text import TextFile
 import json
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pydra.compose import shell
 import typing as ty
@@ -228,7 +228,7 @@ class Eddy(shell.Task["Eddy.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from fileformats.text import TextFile
-    >>> from pydra.tasks.fsl.v6_0.epi.eddy import Eddy
+    >>> from pydra.tasks.fsl.v6.epi.eddy import Eddy
 
     >>> task = Eddy()
     >>> task.in_file = Nifti1.mock("epi.nii")
@@ -319,12 +319,12 @@ class Eddy(shell.Task["Eddy.Outputs"]):
         help="File containing session indices for all volumes in --imain",
         argstr="--session={session}",
     )
-    in_topup_fieldcoef: File = shell.arg(
+    in_topup_fieldcoef: File | None = shell.arg(
         help="Topup results file containing the field coefficients",
         requires=["in_topup_movpar"],
         formatter="in_topup_fieldcoef_formatter",
     )
-    in_topup_movpar: File = shell.arg(
+    in_topup_movpar: File | None = shell.arg(
         help="Topup results file containing the movement parameters (movpar.txt)",
         requires=["in_topup_fieldcoef"],
     )

@@ -20,7 +20,7 @@ class CopyGeom(shell.Task["CopyGeom.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.copy_geom import CopyGeom
+    >>> from pydra.tasks.fsl.v6.utils.copy_geom import CopyGeom
 
     """
 

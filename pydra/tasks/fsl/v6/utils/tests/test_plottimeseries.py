@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.plot_time_series import PlotTimeSeries
+from pydra.tasks.fsl.v6.utils.plot_time_series import PlotTimeSeries
 import pytest
 
 

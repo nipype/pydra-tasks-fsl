@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pathlib import Path
 from pathlib import Path
@@ -58,7 +58,7 @@ class PrepareFieldmap(shell.Task["PrepareFieldmap.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.epi.prepare_fieldmap import PrepareFieldmap
+    >>> from pydra.tasks.fsl.v6.epi.prepare_fieldmap import PrepareFieldmap
 
     >>> task = PrepareFieldmap()
     >>> task.in_phase = Nifti1.mock("phase.nii")

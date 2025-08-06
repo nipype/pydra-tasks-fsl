@@ -16,7 +16,7 @@ class RobustFOV(shell.Task["RobustFOV.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.robust_fov import RobustFOV
+    >>> from pydra.tasks.fsl.v6.utils.robust_fov import RobustFOV
 
     """
 

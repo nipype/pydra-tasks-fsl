@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.maths.apply_mask import ApplyMask
+from pydra.tasks.fsl.v6.maths.apply_mask import ApplyMask
 import pytest
 
 

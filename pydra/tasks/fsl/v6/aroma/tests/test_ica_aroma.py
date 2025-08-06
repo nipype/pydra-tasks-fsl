@@ -2,7 +2,7 @@ from fileformats.generic import Directory, File
 from fileformats.medimage import Nifti1, NiftiGz
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.aroma.ica__aroma import ICA_AROMA
+from pydra.tasks.fsl.v6.aroma.ica__aroma import ICA_AROMA
 import pytest
 
 

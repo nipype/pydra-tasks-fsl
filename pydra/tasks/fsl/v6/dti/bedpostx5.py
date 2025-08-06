@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import Directory, File
 from fileformats.medimage import Bval, Bvec, Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 from pydra.compose import shell
 import typing as ty
 
@@ -220,7 +220,7 @@ class BEDPOSTX5(shell.Task["BEDPOSTX5.Outputs"]):
 
     >>> from fileformats.generic import Directory, File
     >>> from fileformats.medimage import Bval, Bvec, Nifti1
-    >>> from pydra.tasks.fsl.v6_0.dti.bedpostx5 import BEDPOSTX5
+    >>> from pydra.tasks.fsl.v6.dti.bedpostx5 import BEDPOSTX5
 
     >>> task = BEDPOSTX5()
     >>> task.dwi = Nifti1.mock("diffusion.nii")

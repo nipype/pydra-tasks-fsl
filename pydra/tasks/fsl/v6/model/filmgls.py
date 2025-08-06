@@ -2,8 +2,8 @@ import attrs
 from fileformats.generic import Directory, File
 import logging
 from looseversion import LooseVersion
-from pydra.tasks.fsl.v6_0.base import Info
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.base import Info
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pydra.compose import shell
 import typing as ty
@@ -249,7 +249,7 @@ class FILMGLS(shell.Task["FILMGLS.Outputs"]):
     -------
 
     >>> from fileformats.generic import Directory, File
-    >>> from pydra.tasks.fsl.v6_0.model.filmgls import FILMGLS
+    >>> from pydra.tasks.fsl.v6.model.filmgls import FILMGLS
 
     """
 

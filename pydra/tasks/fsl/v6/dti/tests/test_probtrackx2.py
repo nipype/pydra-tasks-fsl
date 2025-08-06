@@ -2,7 +2,7 @@ from fileformats.generic import File
 from fileformats.medimage import NiftiGz
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.prob_track_x2 import ProbTrackX2
+from pydra.tasks.fsl.v6.dti.prob_track_x2 import ProbTrackX2
 import pytest
 
 

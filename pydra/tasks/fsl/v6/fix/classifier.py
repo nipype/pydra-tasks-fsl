@@ -42,7 +42,7 @@ class Classifier(shell.Task["Classifier.Outputs"]):
 
     >>> from fileformats.generic import Directory, File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.fix.classifier import Classifier
+    >>> from pydra.tasks.fsl.v6.fix.classifier import Classifier
 
     """
 

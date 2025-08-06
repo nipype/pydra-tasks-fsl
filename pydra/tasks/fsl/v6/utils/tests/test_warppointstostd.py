@@ -3,7 +3,7 @@ from fileformats.medimage import Nifti1
 from fileformats.text import TextFile
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.warp_points_to_std import WarpPointsToStd
+from pydra.tasks.fsl.v6.utils.warp_points_to_std import WarpPointsToStd
 import pytest
 
 

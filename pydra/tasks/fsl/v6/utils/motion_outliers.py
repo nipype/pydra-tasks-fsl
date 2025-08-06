@@ -19,7 +19,7 @@ class MotionOutliers(shell.Task["MotionOutliers.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.motion_outliers import MotionOutliers
+    >>> from pydra.tasks.fsl.v6.utils.motion_outliers import MotionOutliers
 
     >>> task = MotionOutliers()
     >>> task.in_file = Nifti1.mock("epi.nii")

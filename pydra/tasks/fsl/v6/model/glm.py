@@ -138,7 +138,7 @@ class GLM(shell.Task["GLM.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.model.glm import GLM
+    >>> from pydra.tasks.fsl.v6.model.glm import GLM
 
     >>> task = GLM()
     >>> task.in_file = Nifti1.mock("functional.nii")

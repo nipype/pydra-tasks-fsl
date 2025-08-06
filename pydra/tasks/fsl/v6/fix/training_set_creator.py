@@ -15,7 +15,7 @@ class TrainingSetCreator(python.Task["TrainingSetCreator.Outputs"]):
     -------
 
     >>> from fileformats.generic import Directory
-    >>> from pydra.tasks.fsl.v6_0.fix.training_set_creator import TrainingSetCreator
+    >>> from pydra.tasks.fsl.v6.fix.training_set_creator import TrainingSetCreator
 
     """
 

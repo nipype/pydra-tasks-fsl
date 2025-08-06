@@ -21,7 +21,7 @@ class Level1Design(python.Task["Level1Design.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.model.level_1_design import Level1Design
+    >>> from pydra.tasks.fsl.v6.model.level_1_design import Level1Design
     >>> from pydra.utils.typing import MultiOutputType
 
     """

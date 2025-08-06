@@ -1,7 +1,7 @@
 import attrs
 from fileformats.medimage import Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pathlib import Path
 from pathlib import Path
@@ -34,7 +34,7 @@ class MaxImage(shell.Task["MaxImage.Outputs"]):
 
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.maths.max_image import MaxImage
+    >>> from pydra.tasks.fsl.v6.maths.max_image import MaxImage
 
     >>> task = MaxImage()
     >>> task.in_file = Nifti1.mock("functional.nii"  # doctest: +SKIP)

@@ -17,7 +17,7 @@ class MultipleRegressDesign(python.Task["MultipleRegressDesign.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.model.multiple_regress_design import MultipleRegressDesign
+    >>> from pydra.tasks.fsl.v6.model.multiple_regress_design import MultipleRegressDesign
 
     """
 

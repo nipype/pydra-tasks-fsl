@@ -1,7 +1,7 @@
 from fileformats.medimage import Nifti1
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.epi.eddy_correct import EddyCorrect
+from pydra.tasks.fsl.v6.epi.eddy_correct import EddyCorrect
 import pytest
 
 

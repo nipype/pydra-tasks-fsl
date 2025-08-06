@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pathlib import Path
 from pathlib import Path
@@ -34,7 +34,7 @@ class MeanImage(shell.Task["MeanImage.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.maths.mean_image import MeanImage
+    >>> from pydra.tasks.fsl.v6.maths.mean_image import MeanImage
 
     """
 

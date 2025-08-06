@@ -16,7 +16,7 @@ class L2Model(python.Task["L2Model.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.model.l2_model import L2Model
+    >>> from pydra.tasks.fsl.v6.model.l2_model import L2Model
 
     """
 

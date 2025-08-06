@@ -61,7 +61,7 @@ class WarpUtils(shell.Task["WarpUtils.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.warp_utils import WarpUtils
+    >>> from pydra.tasks.fsl.v6.utils.warp_utils import WarpUtils
 
     >>> task = WarpUtils()
     >>> task.in_file = Nifti1.mock("warpfield.nii")

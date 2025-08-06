@@ -3,7 +3,7 @@ from fileformats.datascience import TextMatrix
 from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pydra.compose import shell
 import typing as ty
@@ -175,7 +175,7 @@ class ProbTrackX(shell.Task["ProbTrackX.Outputs"]):
     >>> from fileformats.datascience import TextMatrix
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
-    >>> from pydra.tasks.fsl.v6_0.dti.prob_track_x import ProbTrackX
+    >>> from pydra.tasks.fsl.v6.dti.prob_track_x import ProbTrackX
 
     >>> task = ProbTrackX()
     >>> task.mode = "seedmask"

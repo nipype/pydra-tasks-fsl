@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.find_the_biggest import FindTheBiggest
+from pydra.tasks.fsl.v6.dti.find_the_biggest import FindTheBiggest
 import pytest
 
 

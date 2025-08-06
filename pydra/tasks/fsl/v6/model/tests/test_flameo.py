@@ -4,7 +4,7 @@ from fileformats.medimage import NiftiGz
 from fileformats.medimage_fsl import Con
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.flameo import FLAMEO
+from pydra.tasks.fsl.v6.model.flameo import FLAMEO
 import pytest
 
 

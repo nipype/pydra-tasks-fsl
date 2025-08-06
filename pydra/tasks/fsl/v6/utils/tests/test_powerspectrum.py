@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.power_spectrum import PowerSpectrum
+from pydra.tasks.fsl.v6.utils.power_spectrum import PowerSpectrum
 import pytest
 
 

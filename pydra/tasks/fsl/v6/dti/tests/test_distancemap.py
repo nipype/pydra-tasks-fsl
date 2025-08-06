@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.distance_map import DistanceMap
+from pydra.tasks.fsl.v6.dti.distance_map import DistanceMap
 import pytest
 
 

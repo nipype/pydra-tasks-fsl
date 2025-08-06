@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import load_json, save_json
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import load_json, save_json
 import os
 from pydra.compose import shell
 import typing as ty
@@ -76,7 +76,7 @@ class ImageStats(shell.Task["ImageStats.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.utils.image_stats import ImageStats
+    >>> from pydra.tasks.fsl.v6.utils.image_stats import ImageStats
 
     >>> task = ImageStats()
     >>> task.in_file = File.mock(funcfile)

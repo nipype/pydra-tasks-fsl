@@ -5,7 +5,7 @@ from fileformats.medimage import NiftiGz
 from fileformats.medimage_fsl import Con
 from glob import glob
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.misc import human_order_sorted
+from pydra.tasks.fsl.v6.nipype_ports.utils.misc import human_order_sorted
 import os
 from pydra.compose import shell
 import typing as ty
@@ -166,7 +166,7 @@ class FLAMEO(shell.Task["FLAMEO.Outputs"]):
     >>> from fileformats.generic import Directory, File
     >>> from fileformats.medimage import NiftiGz
     >>> from fileformats.medimage_fsl import Con
-    >>> from pydra.tasks.fsl.v6_0.model.flameo import FLAMEO
+    >>> from pydra.tasks.fsl.v6.model.flameo import FLAMEO
 
     >>> task = FLAMEO()
     >>> task.cope_file = NiftiGz.mock("cope.nii.gz")

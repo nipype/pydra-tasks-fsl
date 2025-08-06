@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 from pydra.compose import shell
 
 
@@ -54,7 +54,7 @@ class MakeDyadicVectors(shell.Task["MakeDyadicVectors.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.dti.make_dyadic_vectors import MakeDyadicVectors
+    >>> from pydra.tasks.fsl.v6.dti.make_dyadic_vectors import MakeDyadicVectors
 
     """
 

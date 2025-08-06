@@ -1,7 +1,7 @@
 from fileformats.datascience import TextMatrix
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.vest_2_text import Vest2Text
+from pydra.tasks.fsl.v6.utils.vest_2_text import Vest2Text
 import pytest
 
 

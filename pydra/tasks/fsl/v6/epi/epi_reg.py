@@ -165,7 +165,7 @@ class EpiReg(shell.Task["EpiReg.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
-    >>> from pydra.tasks.fsl.v6_0.epi.epi_reg import EpiReg
+    >>> from pydra.tasks.fsl.v6.epi.epi_reg import EpiReg
 
     >>> task = EpiReg()
     >>> task.epi = Nifti1.mock("epi.nii")

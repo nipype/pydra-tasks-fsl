@@ -22,7 +22,7 @@ class Vest2Text(shell.Task["Vest2Text.Outputs"]):
     >>> from fileformats.datascience import TextMatrix
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.vest_2_text import Vest2Text
+    >>> from pydra.tasks.fsl.v6.utils.vest_2_text import Vest2Text
 
     >>> task = Vest2Text()
     >>> task.in_file = TextMatrix.mock("design.mat")

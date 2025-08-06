@@ -2,7 +2,7 @@ from fileformats.generic import File
 from fileformats.medimage import Bval, Nifti1
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.dti_fit import DTIFit
+from pydra.tasks.fsl.v6.dti.dti_fit import DTIFit
 import pytest
 
 

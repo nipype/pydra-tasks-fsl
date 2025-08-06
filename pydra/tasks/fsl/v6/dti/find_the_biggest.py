@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pathlib import Path
 from pathlib import Path
@@ -32,7 +32,7 @@ class FindTheBiggest(shell.Task["FindTheBiggest.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.dti.find_the_biggest import FindTheBiggest
+    >>> from pydra.tasks.fsl.v6.dti.find_the_biggest import FindTheBiggest
 
     >>> task = FindTheBiggest()
     >>> task.in_files = ldir

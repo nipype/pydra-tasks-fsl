@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from fileformats.medimage import Bval, Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 from pydra.compose import shell
 
 
@@ -128,7 +128,7 @@ class DTIFit(shell.Task["DTIFit.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Bval, Nifti1
-    >>> from pydra.tasks.fsl.v6_0.dti.dti_fit import DTIFit
+    >>> from pydra.tasks.fsl.v6.dti.dti_fit import DTIFit
 
     >>> task = DTIFit()
     >>> task.dwi = Nifti1.mock("diffusion.nii")

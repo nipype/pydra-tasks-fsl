@@ -2,7 +2,7 @@ from fileformats.generic import File
 from fileformats.medimage_fsl import Con
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.melodic import MELODIC
+from pydra.tasks.fsl.v6.model.melodic import MELODIC
 import pytest
 
 

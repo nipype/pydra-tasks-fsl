@@ -53,7 +53,7 @@ class ApplyTOPUP(shell.Task["ApplyTOPUP.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1, NiftiGz
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.epi.apply_topup import ApplyTOPUP
+    >>> from pydra.tasks.fsl.v6.epi.apply_topup import ApplyTOPUP
 
     >>> task = ApplyTOPUP()
     >>> task.in_files = [Nifti1.mock("epi.nii"), Nifti1.mock("epi_rev.nii")]
@@ -79,12 +79,12 @@ class ApplyTOPUP(shell.Task["ApplyTOPUP.Outputs"]):
         argstr="--inindex={in_index}",
         sep=",",
     )
-    in_topup_fieldcoef: NiftiGz = shell.arg(
+    in_topup_fieldcoef: NiftiGz | None = shell.arg(
         help="topup file containing the field coefficients",
         requires=["in_topup_movpar"],
         formatter="in_topup_fieldcoef_formatter",
     )
-    in_topup_movpar: File = shell.arg(
+    in_topup_movpar: File | None = shell.arg(
         help="topup movpar.txt file", requires=["in_topup_fieldcoef"]
     )
     method: ty.Any = shell.arg(

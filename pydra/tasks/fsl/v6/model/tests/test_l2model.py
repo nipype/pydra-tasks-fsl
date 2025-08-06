@@ -1,6 +1,6 @@
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.l2_model import L2Model
+from pydra.tasks.fsl.v6.model.l2_model import L2Model
 import pytest
 
 

@@ -2,7 +2,7 @@ from fileformats.generic import Directory, File
 from fileformats.medimage import Bval, Bvec, Nifti1
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.bedpostx5 import BEDPOSTX5
+from pydra.tasks.fsl.v6.dti.bedpostx5 import BEDPOSTX5
 import pytest
 
 

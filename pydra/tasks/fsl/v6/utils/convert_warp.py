@@ -19,7 +19,7 @@ class ConvertWarp(shell.Task["ConvertWarp.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.convert_warp import ConvertWarp
+    >>> from pydra.tasks.fsl.v6.utils.convert_warp import ConvertWarp
 
     >>> task = ConvertWarp()
     >>> task.reference = File.mock()

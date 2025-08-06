@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.preprocess.slice_timer import SliceTimer
+from pydra.tasks.fsl.v6.preprocess.slice_timer import SliceTimer
 import pytest
 
 

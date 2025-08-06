@@ -35,7 +35,7 @@ class Training(shell.Task["Training.Outputs"]):
     -------
 
     >>> from fileformats.generic import Directory, File
-    >>> from pydra.tasks.fsl.v6_0.fix.training import Training
+    >>> from pydra.tasks.fsl.v6.fix.training import Training
 
     """
 

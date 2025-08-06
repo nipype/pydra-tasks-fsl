@@ -24,7 +24,7 @@ class B0Calc(shell.Task["B0Calc.Outputs"]):
 
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.possum.b0_calc import B0Calc
+    >>> from pydra.tasks.fsl.v6.possum.b0_calc import B0Calc
 
     >>> task = B0Calc()
     >>> task.in_file = Nifti1.mock("tissue+air_map.nii")

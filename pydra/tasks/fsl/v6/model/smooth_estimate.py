@@ -49,7 +49,7 @@ class SmoothEstimate(shell.Task["SmoothEstimate.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import NiftiGz
-    >>> from pydra.tasks.fsl.v6_0.model.smooth_estimate import SmoothEstimate
+    >>> from pydra.tasks.fsl.v6.model.smooth_estimate import SmoothEstimate
 
     >>> task = SmoothEstimate()
     >>> task.mask_file = File.mock()
@@ -66,7 +66,7 @@ class SmoothEstimate(shell.Task["SmoothEstimate.Outputs"]):
         help="number of degrees of freedom", argstr="--dof={dof}"
     )
     mask_file: File = shell.arg(help="brain mask volume", argstr="--mask={mask_file}")
-    residual_fit_file: File = shell.arg(
+    residual_fit_file: File | None = shell.arg(
         help="residual-fit image file",
         argstr="--res={residual_fit_file}",
         requires=["dof"],

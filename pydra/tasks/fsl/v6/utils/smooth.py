@@ -32,7 +32,7 @@ class Smooth(shell.Task["Smooth.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.smooth import Smooth
+    >>> from pydra.tasks.fsl.v6.utils.smooth import Smooth
 
     >>> task = Smooth()
     >>> task.in_file = File.mock()

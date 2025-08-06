@@ -2,7 +2,7 @@ from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.dual_regression import DualRegression
+from pydra.tasks.fsl.v6.model.dual_regression import DualRegression
 import pytest
 
 

@@ -3,7 +3,7 @@ from fileformats.medimage import Nifti1
 from fileformats.text import TextFile
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.epi.eddy import Eddy
+from pydra.tasks.fsl.v6.epi.eddy import Eddy
 import pytest
 
 

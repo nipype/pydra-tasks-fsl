@@ -18,7 +18,7 @@ class InvWarp(shell.Task["InvWarp.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.inv_warp import InvWarp
+    >>> from pydra.tasks.fsl.v6.utils.inv_warp import InvWarp
 
     >>> task = InvWarp()
     >>> task.warp = Nifti1.mock("struct2mni.nii")

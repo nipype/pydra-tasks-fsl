@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.image_stats import ImageStats
+from pydra.tasks.fsl.v6.utils.image_stats import ImageStats
 import pytest
 
 

@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.contrast_mgr import ContrastMgr
+from pydra.tasks.fsl.v6.model.contrast_mgr import ContrastMgr
 import pytest
 
 

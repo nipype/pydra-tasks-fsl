@@ -35,7 +35,7 @@ class AccuracyTester(shell.Task["AccuracyTester.Outputs"]):
     -------
 
     >>> from fileformats.generic import Directory, File
-    >>> from pydra.tasks.fsl.v6_0.fix.accuracy_tester import AccuracyTester
+    >>> from pydra.tasks.fsl.v6.fix.accuracy_tester import AccuracyTester
 
     """
 

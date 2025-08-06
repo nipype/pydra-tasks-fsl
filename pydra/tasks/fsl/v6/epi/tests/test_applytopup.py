@@ -2,7 +2,7 @@ from fileformats.generic import File
 from fileformats.medimage import Nifti1, NiftiGz
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.epi.apply_topup import ApplyTOPUP
+from pydra.tasks.fsl.v6.epi.apply_topup import ApplyTOPUP
 import pytest
 
 

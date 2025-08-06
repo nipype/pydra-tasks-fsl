@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 import os.path as op
 from pathlib import Path
@@ -276,7 +276,7 @@ class BET(shell.Task["BET.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.preprocess.bet import BET
+    >>> from pydra.tasks.fsl.v6.preprocess.bet import BET
 
     >>> task = BET()
     >>> task.in_file = Nifti1.mock("structural.nii")

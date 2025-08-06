@@ -1,7 +1,7 @@
 from fileformats.medimage import Nifti1
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.maths.max_image import MaxImage
+from pydra.tasks.fsl.v6.maths.max_image import MaxImage
 import pytest
 
 

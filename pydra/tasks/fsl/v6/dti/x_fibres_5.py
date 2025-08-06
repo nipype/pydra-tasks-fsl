@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import Directory, File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pydra.compose import shell
 import typing as ty
@@ -181,7 +181,7 @@ class XFibres5(shell.Task["XFibres5.Outputs"]):
     -------
 
     >>> from fileformats.generic import Directory, File
-    >>> from pydra.tasks.fsl.v6_0.dti.x_fibres_5 import XFibres5
+    >>> from pydra.tasks.fsl.v6.dti.x_fibres_5 import XFibres5
 
     """
 

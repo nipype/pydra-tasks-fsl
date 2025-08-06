@@ -90,7 +90,7 @@ class AvScale(shell.Task["AvScale.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.utils.av_scale import AvScale
+    >>> from pydra.tasks.fsl.v6.utils.av_scale import AvScale
 
     """
 

@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import numpy as np
 import os
 from pathlib import Path
@@ -86,7 +86,7 @@ class SUSAN(shell.Task["SUSAN.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.preprocess.susan import SUSAN
+    >>> from pydra.tasks.fsl.v6.preprocess.susan import SUSAN
 
     """
 

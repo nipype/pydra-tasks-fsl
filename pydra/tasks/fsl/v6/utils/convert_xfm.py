@@ -2,7 +2,7 @@ import attrs
 from fileformats.datascience import TextMatrix
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import (
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import (
     fname_presuffix,
     split_filename,
 )
@@ -40,7 +40,7 @@ class ConvertXFM(shell.Task["ConvertXFM.Outputs"]):
     >>> from fileformats.datascience import TextMatrix
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.convert_xfm import ConvertXFM
+    >>> from pydra.tasks.fsl.v6.utils.convert_xfm import ConvertXFM
 
     >>> task = ConvertXFM()
     >>> task.in_file = TextMatrix.mock("flirt.mat")

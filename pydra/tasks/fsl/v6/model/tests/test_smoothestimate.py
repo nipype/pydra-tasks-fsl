@@ -2,7 +2,7 @@ from fileformats.generic import File
 from fileformats.medimage import NiftiGz
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.smooth_estimate import SmoothEstimate
+from pydra.tasks.fsl.v6.model.smooth_estimate import SmoothEstimate
 import pytest
 
 

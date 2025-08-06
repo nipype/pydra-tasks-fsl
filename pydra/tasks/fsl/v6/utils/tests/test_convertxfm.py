@@ -2,7 +2,7 @@ from fileformats.datascience import TextMatrix
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.convert_xfm import ConvertXFM
+from pydra.tasks.fsl.v6.utils.convert_xfm import ConvertXFM
 import pytest
 
 

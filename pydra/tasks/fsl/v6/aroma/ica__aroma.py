@@ -80,7 +80,7 @@ class ICA_AROMA(shell.Task["ICA_AROMA.Outputs"]):
 
     >>> from fileformats.generic import Directory, File
     >>> from fileformats.medimage import Nifti1, NiftiGz
-    >>> from pydra.tasks.fsl.v6_0.aroma.ica__aroma import ICA_AROMA
+    >>> from pydra.tasks.fsl.v6.aroma.ica__aroma import ICA_AROMA
 
     >>> task = ICA_AROMA()
     >>> task.feat_dir = Directory.mock()

@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 from pathlib import Path
 from pathlib import Path
 from pydra.compose import shell
@@ -33,7 +33,7 @@ class SigLoss(shell.Task["SigLoss.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.sig_loss import SigLoss
+    >>> from pydra.tasks.fsl.v6.utils.sig_loss import SigLoss
 
     """
 

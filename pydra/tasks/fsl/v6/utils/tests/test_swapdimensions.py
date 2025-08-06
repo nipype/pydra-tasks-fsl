@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.swap_dimensions import SwapDimensions
+from pydra.tasks.fsl.v6.utils.swap_dimensions import SwapDimensions
 import pytest
 
 

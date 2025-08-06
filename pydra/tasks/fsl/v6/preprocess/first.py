@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import split_filename
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import split_filename
 import os.path as op
 from pathlib import Path
 from pathlib import Path
@@ -116,7 +116,7 @@ class FIRST(shell.Task["FIRST.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.preprocess.first import FIRST
+    >>> from pydra.tasks.fsl.v6.preprocess.first import FIRST
 
     """
 

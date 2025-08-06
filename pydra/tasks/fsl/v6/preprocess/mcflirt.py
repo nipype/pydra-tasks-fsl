@@ -4,8 +4,8 @@ from fileformats.medimage import Nifti1
 import logging
 from looseversion import LooseVersion
 from nibabel import load
-from pydra.tasks.fsl.v6_0.base import Info
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.base import Info
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pathlib import Path
 from pathlib import Path
@@ -197,7 +197,7 @@ class MCFLIRT(shell.Task["MCFLIRT.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.preprocess.mcflirt import MCFLIRT
+    >>> from pydra.tasks.fsl.v6.preprocess.mcflirt import MCFLIRT
 
     >>> task = MCFLIRT()
     >>> task.in_file = Nifti1.mock("functional.nii")

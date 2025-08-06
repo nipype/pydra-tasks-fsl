@@ -38,7 +38,7 @@ class ApplyXFM(shell.Task["ApplyXFM.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.preprocess.apply_xfm import ApplyXFM
+    >>> from pydra.tasks.fsl.v6.preprocess.apply_xfm import ApplyXFM
 
     """
 
@@ -176,19 +176,19 @@ class ApplyXFM(shell.Task["ApplyXFM.Outputs"]):
     )
 
     class Outputs(shell.Outputs):
-        out_file: Path = shell.outarg(
+        out_file: File = shell.outarg(
             help="registered output file",
             argstr="-out {out_file}",
             path_template="{in_file}_flirt",
             position=3,
         )
-        out_matrix_file: Path = shell.outarg(
+        out_matrix_file: File = shell.outarg(
             help="output affine matrix in 4x4 asciii format",
             argstr="-omat {out_matrix_file}",
             path_template="{in_file}_flirt.mat",
             position=4,
         )
-        out_log: Path = shell.outarg(
+        out_log: File | None = shell.outarg(
             help="output log",
             requires=["save_log"],
             path_template="{in_file}_flirt.log",

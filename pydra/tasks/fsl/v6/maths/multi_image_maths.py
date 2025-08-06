@@ -1,7 +1,7 @@
 import attrs
 from fileformats.medimage import Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import fname_presuffix
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import fname_presuffix
 import os
 from pathlib import Path
 from pathlib import Path
@@ -48,7 +48,7 @@ class MultiImageMaths(shell.Task["MultiImageMaths.Outputs"]):
 
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.maths.multi_image_maths import MultiImageMaths
+    >>> from pydra.tasks.fsl.v6.maths.multi_image_maths import MultiImageMaths
 
     >>> task = MultiImageMaths()
     >>> task.operand_files = [Nifti1.mock("functional2.nii"), Nifti1.mock("functional3.nii")]

@@ -36,7 +36,7 @@ class Cleaner(shell.Task["Cleaner.Outputs"]):
     -------
 
     >>> from fileformats.generic import File
-    >>> from pydra.tasks.fsl.v6_0.fix.cleaner import Cleaner
+    >>> from pydra.tasks.fsl.v6.fix.cleaner import Cleaner
 
     """
 
@@ -54,28 +54,28 @@ class Cleaner(shell.Task["Cleaner.Outputs"]):
     highpass: float = shell.arg(
         help="cleanup motion confounds",
         argstr="-m -h {highpass}",
-        position=2,
+        position=3,
         default=100,
     )
     aggressive: bool = shell.arg(
         help="Apply aggressive (full variance) cleanup, instead of the default less-aggressive (unique variance) cleanup.",
         argstr="-A",
-        position=3,
+        position=4,
     )
     confound_file: File = shell.arg(
         help="Include additional confound file.",
         argstr="-x {confound_file}",
-        position=4,
+        position=5,
     )
     confound_file_1: File = shell.arg(
         help="Include additional confound file.",
         argstr="-x {confound_file_1}",
-        position=5,
+        position=6,
     )
     confound_file_2: File = shell.arg(
         help="Include additional confound file.",
         argstr="-x {confound_file_2}",
-        position=6,
+        position=7,
     )
 
     class Outputs(shell.Outputs):

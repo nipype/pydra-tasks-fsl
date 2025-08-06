@@ -22,7 +22,7 @@ class Text2Vest(shell.Task["Text2Vest.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.text import TextFile
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.text_2_vest import Text2Vest
+    >>> from pydra.tasks.fsl.v6.utils.text_2_vest import Text2Vest
 
     >>> task = Text2Vest()
     >>> task.in_file = TextFile.mock("design.txt")

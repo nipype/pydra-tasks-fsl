@@ -1,7 +1,7 @@
 from fileformats.generic import Directory, File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.x_fibres_5 import XFibres5
+from pydra.tasks.fsl.v6.dti.x_fibres_5 import XFibres5
 import pytest
 
 

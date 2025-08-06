@@ -1,6 +1,6 @@
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.multiple_regress_design import MultipleRegressDesign
+from pydra.tasks.fsl.v6.model.multiple_regress_design import MultipleRegressDesign
 import pytest
 
 

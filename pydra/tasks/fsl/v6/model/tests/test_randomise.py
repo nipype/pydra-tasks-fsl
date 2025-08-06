@@ -4,7 +4,7 @@ from fileformats.medimage import Nifti1
 from fileformats.medimage_fsl import Con
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.model.randomise import Randomise
+from pydra.tasks.fsl.v6.model.randomise import Randomise
 import pytest
 
 

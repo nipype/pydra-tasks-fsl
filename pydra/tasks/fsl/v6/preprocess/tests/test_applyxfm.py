@@ -1,7 +1,7 @@
 from fileformats.generic import File
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.preprocess.apply_xfm import ApplyXFM
+from pydra.tasks.fsl.v6.preprocess.apply_xfm import ApplyXFM
 import pytest
 
 

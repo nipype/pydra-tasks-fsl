@@ -1,7 +1,7 @@
 from fileformats.medimage import Nifti1
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.utils.slice import Slice
+from pydra.tasks.fsl.v6.utils.slice import Slice
 import pytest
 
 

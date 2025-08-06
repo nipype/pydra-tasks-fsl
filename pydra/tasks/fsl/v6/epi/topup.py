@@ -3,8 +3,8 @@ from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
 import nibabel as nb
-from pydra.tasks.fsl.v6_0.base import Info
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import (
+from pydra.tasks.fsl.v6.base import Info
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import (
     fname_presuffix,
     split_filename,
 )
@@ -166,7 +166,7 @@ class TOPUP(shell.Task["TOPUP.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.epi.topup import TOPUP
+    >>> from pydra.tasks.fsl.v6.epi.topup import TOPUP
     >>> from pydra.utils.typing import MultiInputObj
 
     >>> task = TOPUP()

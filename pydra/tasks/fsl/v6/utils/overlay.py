@@ -1,7 +1,7 @@
 import attrs
 from fileformats.generic import File
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import (
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import (
     fname_presuffix,
     split_filename,
 )
@@ -82,7 +82,7 @@ class Overlay(shell.Task["Overlay.Outputs"]):
 
     >>> from fileformats.generic import File
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.utils.overlay import Overlay
+    >>> from pydra.tasks.fsl.v6.utils.overlay import Overlay
 
     """
 

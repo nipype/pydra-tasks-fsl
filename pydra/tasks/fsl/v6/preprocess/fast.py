@@ -2,7 +2,7 @@ import attrs
 from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
-from pydra.tasks.fsl.v6_0.nipype_ports.utils.filemanip import (
+from pydra.tasks.fsl.v6.nipype_ports.utils.filemanip import (
     fname_presuffix,
     split_filename,
 )
@@ -249,7 +249,7 @@ class FAST(shell.Task["FAST.Outputs"]):
     >>> from fileformats.generic import File
     >>> from fileformats.medimage import Nifti1
     >>> from pathlib import Path
-    >>> from pydra.tasks.fsl.v6_0.preprocess.fast import FAST
+    >>> from pydra.tasks.fsl.v6.preprocess.fast import FAST
 
     >>> task = FAST()
     >>> task.in_files = [Nifti1.mock("s"), Nifti1.mock("t"), Nifti1.mock("r"), Nifti1.mock("u"), Nifti1.mock("c"), Nifti1.mock("t"), Nifti1.mock("u"), Nifti1.mock("r"), Nifti1.mock("a"), Nifti1.mock("l"), Nifti1.mock("."), Nifti1.mock("n"), Nifti1.mock("i"), Nifti1.mock("i")]

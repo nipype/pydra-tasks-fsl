@@ -3,7 +3,7 @@ from fileformats.generic import File
 from fileformats.medimage import Nifti1
 import logging
 from nipype2pydra.testing import PassAfterTimeoutWorker
-from pydra.tasks.fsl.v6_0.dti.vec_reg import VecReg
+from pydra.tasks.fsl.v6.dti.vec_reg import VecReg
 import pytest
 
 
