@@ -129,3 +129,6 @@ junit_family = "xunit2"
 
 [tool.ruff.lint]
 ignore = ["FBT001", "FA100"]
+
+[tool.pyright]
+reportAssignmentType = false
